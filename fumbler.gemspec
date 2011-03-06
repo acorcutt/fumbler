@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Anthony Corcutt"]
   s.email       = ["acorcutt@me.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/acorcutt/fumbler"
   s.summary     = %q{Tumblr style template engine for ruby}
 
   s.rubyforge_project = "fumbler"
