@@ -26,43 +26,43 @@ Inherit from the Model class to create your context which the template can acces
 
 
 
-  class Cage < Fumbler::Model
-    fumbleable :inside,:current
-    
-    def initialize(c)
-      @current = c
+    class Cage < Fumbler::Model
+      fumbleable :inside,:current
+      
+      def initialize(c)
+        @current = c
+      end
+      
+      def inside
+        "im trapped"
+      end
+      
+      def current
+        @current
+      end
     end
-    
-    def inside
-      "im trapped"
+      
+    class Context < Fumbler::Model
+      
+      fumbleable :you, :cage, :cages
+      
+      def you
+        "dave"
+      end
+      
+      def hidden
+        "you cant access me"
+      end
+          
+      def cage
+        Cage.new(0)
+      end
+      
+      def cages
+        [Cage.new(1),Cage.new(2)]
+      end
     end
-    
-    def current
-      @current
-    end
-  end
-    
-  class Context < Fumbler::Model
-    
-    fumbleable :you, :cage, :cages
-    
-    def you
-      "dave"
-    end
-    
-    def hidden
-      "you cant access me"
-    end
-        
-    def cage
-      Cage.new(0)
-    end
-    
-    def cages
-      [Cage.new(1),Cage.new(2)]
-    end
-  end
-  @context = Context.new
+    @context = Context.new
 
 
 
@@ -80,14 +80,14 @@ The current syntax supports basic {tags} and {block:items}{tagsinparent}or{tagsi
 TODO
 ----
 
-Attributes
-Meta-settings
-Partials
-Layout Inheritance
-File handling
-Rails Integration via Tilt
-Re-write the regex as a token scanner
-Lots More!
+-Attributes
+-Meta-settings
+-Partials
+-Layout Inheritance
+-File handling
+-Rails Integration via Tilt
+-Re-write the regex as a token scanner
+-Lots More!
 
 
 
