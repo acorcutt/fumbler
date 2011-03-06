@@ -72,22 +72,22 @@ This is based on [Tilt](https://github.com/rtomayko/tilt) but not everything is 
 
 The current syntax supports basic {tags} and {block:items}{tagsinparent}or{tagsinhere}{/block:items}, blocks can be nested and will always look to the parent for missing tags.
 
-  t = Fumbler::Template.new {"hello {you}, {block:cage}{current}{/block:cage}  {block:cages}{you}{current},{/block:cages}]"}
-  t.render(@context)
+    t = Fumbler::Template.new {"hello {you}, {block:cage}{current}{/block:cage}  {block:cages}{you}{current},{/block:cages}]"}
+    t.render(@context)
 
 
 
 TODO
 ----
 
--Attributes
--Meta-settings
--Partials
--Layout Inheritance
--File handling
--Rails Integration via Tilt
--Re-write the regex as a token scanner
--Lots More!
+* Attributes
+* Meta-settings
+* Partials
+* Layout Inheritance
+* File handling
+* Rails Integration via Tilt
+* Re-write the regex as a token scanner
+* Lots More!
 
 
 
